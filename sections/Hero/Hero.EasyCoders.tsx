@@ -23,15 +23,15 @@ export default function Hero({ title, subtitle, hasButtons }: Props) {
                     href="/login"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-slate-950 hover:bg-slate-900 md:py-4 md:text-lg md:px-10"
                   >
-                    Iniciar
+                    Logar
                   </a>
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <a
-                    href="#"
+                    href="/register"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                   >
-                    Demonstração
+                    Cadastrar
                   </a>
                 </div>
               </div>

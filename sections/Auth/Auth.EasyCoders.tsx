@@ -22,6 +22,11 @@ export interface Props {
     isOutlined?: boolean;
     title: string;
   }>;
+  footerParagraph: {
+    title: string;
+    linkName: string;
+    linkHref: string;
+  }
 }
 
 export default function Auth(
@@ -31,6 +36,7 @@ export default function Auth(
     removeCloseButton,
     inputs,
     buttons,
+    footerParagraph
   }: Props,
 ) {
   return (
@@ -97,10 +103,12 @@ export default function Auth(
             </button>
           ))}
 
-          <span class="flex items-center pt-2 gap-1 text-[#787878]">
-            Não possui uma conta?
-            <p class="cursor-pointer hover:underline">Cadastre-se</p>
-          </span>
+          {footerParagraph && (
+            <span class="flex items-center pt-2 gap-1 text-[#787878]">
+              {footerParagraph.title}
+              <a href={`${footerParagraph.linkHref}`} class="cursor-pointer hover:underline">{footerParagraph.linkName}</a>
+            </span>
+          )}
         </footer>
       </div>
     </div>

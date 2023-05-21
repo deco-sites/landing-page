@@ -7062,11 +7062,35 @@
             ]
           },
           "title": "Buttons"
+        },
+        "footerParagraph": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "linkName": {
+              "type": "string",
+              "title": "Link Name"
+            },
+            "linkHref": {
+              "type": "string",
+              "title": "Link Href"
+            }
+          },
+          "required": [
+            "title",
+            "linkName",
+            "linkHref"
+          ],
+          "title": "Footer Paragraph"
         }
       },
       "required": [
         "title",
-        "description"
+        "description",
+        "footerParagraph"
       ],
       "title": "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx@Props"
     },
@@ -7431,6 +7455,10 @@
                 ],
                 "title": "Image"
               },
+              "price": {
+                "type": "number",
+                "title": "Price"
+              },
               "hasButton": {
                 "type": [
                   "boolean",
@@ -7442,7 +7470,8 @@
             "required": [
               "title",
               "description",
-              "image"
+              "image",
+              "price"
             ]
           },
           "title": "Products"

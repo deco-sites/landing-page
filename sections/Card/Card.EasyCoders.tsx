@@ -10,6 +10,7 @@ export interface Props {
       url: ImageType;
       textAlt: string;
     };
+    price: number;
     hasButton?: boolean;
   }>;
 }
@@ -48,8 +49,13 @@ export default function Card({ products, title }: Props) {
                   <h1 className="text-2xl font-bold tracking-wide pt-3">
                     {product.title}
                   </h1>
+
                   <span className="hidden group-hover:flex max-w-[85%] leading-5 text-sm tracking-widest pb-3">
                     {product.description}
+                  </span>
+
+                  <span className="hidden group-hover:flex max-w-[85%] leading-5 text-2xl font-bold tracking-widest pb-3">
+                    R$ {product.price}
                   </span>
 
                   {product.hasButton && (
