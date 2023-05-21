@@ -26,7 +26,7 @@ export interface Props {
     title: string;
     linkName: string;
     linkHref: string;
-  }
+  };
 }
 
 export default function Auth(
@@ -36,7 +36,7 @@ export default function Auth(
     removeCloseButton,
     inputs,
     buttons,
-    footerParagraph
+    footerParagraph,
   }: Props,
 ) {
   return (
@@ -106,7 +106,12 @@ export default function Auth(
           {footerParagraph && (
             <span class="flex items-center pt-2 gap-1 text-[#787878]">
               {footerParagraph.title}
-              <a href={`${footerParagraph.linkHref}`} class="cursor-pointer hover:underline">{footerParagraph.linkName}</a>
+              <a
+                href={`${footerParagraph.linkHref}`}
+                class="cursor-pointer hover:underline"
+              >
+                {footerParagraph.linkName}
+              </a>
             </span>
           )}
         </footer>

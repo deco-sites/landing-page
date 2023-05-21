@@ -21,7 +21,7 @@ export default function Card({ products, title }: Props) {
       <div className="flex flex-col gap-12 container justify-center h-screen mx-auto px-4 lg:py-12">
         <h1 className="font-bold text-2xl tracking-wide leading-5">{title}</h1>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-24">
           {products?.map((product) => (
             <section
               key={product.title}
