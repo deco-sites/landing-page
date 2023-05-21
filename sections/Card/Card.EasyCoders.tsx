@@ -17,7 +17,7 @@ export interface Props {
 export default function Card({ products, title }: Props) {
   return (
     <div class="flex flex-col lg:flex-row">
-      <div className="flex flex-col gap-12 container justify-center h-screen mx-auto px-4 py-12">
+      <div className="flex flex-col gap-12 container justify-center h-screen mx-auto px-4 lg:py-12">
         <h1 className="font-bold text-2xl tracking-wide leading-5">{title}</h1>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
