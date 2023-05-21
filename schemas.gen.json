@@ -80,8 +80,10 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx",
               "deco-sites/landing-page/sections/BannerGrid.tsx",
               "deco-sites/landing-page/sections/BannerPLP.tsx",
+              "deco-sites/landing-page/sections/Card/Card.EasyCoders.tsx",
               "deco-sites/landing-page/sections/Carousel.tsx",
               "deco-sites/landing-page/sections/CookieConsent.tsx",
               "deco-sites/landing-page/sections/DesignSystem.tsx",
@@ -90,9 +92,12 @@
               "deco-sites/landing-page/sections/Header.tsx",
               "deco-sites/landing-page/sections/Highlights.tsx",
               "deco-sites/landing-page/sections/LinkTree.tsx",
+              "deco-sites/landing-page/sections/Logos/Logos.KleberTavares.tsx",
+              "deco-sites/landing-page/sections/Newsletter/NewsletterModal.EasyCoders.tsx",
               "deco-sites/landing-page/sections/ProductDetails.tsx",
               "deco-sites/landing-page/sections/ProductShelf.tsx",
               "deco-sites/landing-page/sections/SearchResult.tsx",
+              "deco-sites/landing-page/sections/SectionImage/SectionImage.EasyCoders.tsx",
               "deco-sites/landing-page/sections/WhatsApp.tsx",
               "deco-sites/landing-page/sections/WishlistGallery.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -6928,6 +6933,140 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQXV0aC9BdXRoLkVhc3lDb2RlcnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "removeCloseButton": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Remove Close Button"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "text"
+                  },
+                  {
+                    "type": "string",
+                    "const": "email"
+                  },
+                  {
+                    "type": "string",
+                    "const": "password"
+                  }
+                ],
+                "type": "string",
+                "title": "Type"
+              },
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "placeholder": {
+                "type": "string",
+                "title": "Placeholder"
+              }
+            },
+            "required": [
+              "type",
+              "label",
+              "placeholder"
+            ]
+          },
+          "title": "Inputs"
+        },
+        "buttons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "btn-primary"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-secondary"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-accent"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-ghost"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-info"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-success"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-warning"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-error"
+                  },
+                  {
+                    "type": "string",
+                    "const": "loading"
+                  },
+                  {
+                    "type": "string",
+                    "const": "btn-disabled"
+                  }
+                ],
+                "type": "string",
+                "title": "Color"
+              },
+              "isOutlined": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Is Outlined"
+              },
+              "title": {
+                "type": "string",
+                "title": "Title"
+              }
+            },
+            "required": [
+              "title"
+            ]
+          },
+          "title": "Buttons"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ],
+      "title": "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
       "type": "string",
       "format": "image-uri",
@@ -7200,6 +7339,54 @@
       },
       "required": [],
       "title": "deco-sites/landing-page/components/ui/BannerPLP.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQ2FyZC9DYXJkLkVhc3lDb2RlcnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title"
+              },
+              "description": {
+                "type": "string",
+                "title": "Description"
+              },
+              "image": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Image"
+              },
+              "hasButton": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Has Button"
+              }
+            },
+            "required": [
+              "title",
+              "description"
+            ]
+          },
+          "title": "Products"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "deco-sites/landing-page/sections/Card/Card.EasyCoders.tsx@Props"
     },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2UvY29tcG9uZW50cy91aS9CYW5uZXJDYXJvdXNlbC50c3g=@Banner": {
       "type": "object",
@@ -7502,7 +7689,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4": {
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9797b9ecc28e31d06c43746c00ebb398&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors"
@@ -7518,7 +7705,7 @@
           "required": []
         }
       ],
-      "title": "Colors&b966eeb0bbdb3699ee11b12ce6a39cc4"
+      "title": "9797b9ecc28e31d06c43746c00ebb398&Colors"
     },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Miscellaneous": {
       "type": "object",
@@ -7621,7 +7808,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9797b9ecc28e31d06c43746c00ebb398&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8344,6 +8531,109 @@
       "required": [],
       "title": "deco-sites/landing-page/components/ui/LinkTree.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTG9nb3MvTG9nb3MuS2xlYmVyVGF2YXJlcy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "imgUrl": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Url"
+              },
+              "textAlt": {
+                "type": "string",
+                "title": "Text Alt"
+              }
+            },
+            "required": [
+              "url",
+              "textAlt"
+            ]
+          },
+          "title": "Img Url"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "imgUrl"
+      ],
+      "title": "deco-sites/landing-page/sections/Logos/Logos.KleberTavares.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyTW9kYWwuRWFzeUNvZGVycy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "image": {
+          "type": "string",
+          "title": "Image"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "text"
+                  },
+                  {
+                    "type": "string",
+                    "const": "email"
+                  },
+                  {
+                    "type": "string",
+                    "const": "password"
+                  }
+                ],
+                "type": "string",
+                "title": "Type"
+              },
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "placeholder": {
+                "type": "string",
+                "title": "Placeholder"
+              }
+            },
+            "required": [
+              "type",
+              "label",
+              "placeholder"
+            ]
+          },
+          "title": "Inputs"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "image"
+      ],
+      "title": "deco-sites/landing-page/sections/Newsletter/NewsletterModal.EasyCoders.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2UvY29tcG9uZW50cy9wcm9kdWN0L1Byb2R1Y3REZXRhaWxzLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -8455,6 +8745,48 @@
         "columns"
       ],
       "title": "deco-sites/landing-page/components/search/SearchResult.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvU2VjdGlvbkltYWdlL1NlY3Rpb25JbWFnZS5FYXN5Q29kZXJzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subscription": {
+          "type": "string",
+          "title": "Subscription"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Url"
+            },
+            "textAlt": {
+              "type": "string",
+              "title": "Text Alt"
+            }
+          },
+          "required": [
+            "url",
+            "textAlt"
+          ],
+          "title": "Image"
+        }
+      },
+      "required": [
+        "title",
+        "subscription",
+        "description",
+        "image"
+      ],
+      "title": "deco-sites/landing-page/sections/SectionImage/SectionImage.EasyCoders.tsx@Props"
     },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2UvY29tcG9uZW50cy91aS9XaGF0c0FwcC50c3g=@Props": {
       "type": "object",
@@ -8857,7 +9189,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8973,7 +9309,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8991,13 +9327,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -10804,6 +11140,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQXV0aC9BdXRoLkVhc3lDb2RlcnMudHN4": {
+      "title": "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQXV0aC9BdXRoLkVhc3lDb2RlcnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyR3JpZC50c3g=": {
       "title": "deco-sites/landing-page/sections/BannerGrid.tsx",
       "type": "object",
@@ -10843,6 +11200,27 @@
             "deco-sites/landing-page/sections/BannerPLP.tsx"
           ],
           "default": "deco-sites/landing-page/sections/BannerPLP.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQ2FyZC9DYXJkLkVhc3lDb2RlcnMudHN4": {
+      "title": "deco-sites/landing-page/sections/Card/Card.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQ2FyZC9DYXJkLkVhc3lDb2RlcnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/Card/Card.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/Card/Card.EasyCoders.tsx"
         }
       }
     },
@@ -11009,6 +11387,48 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTG9nb3MvTG9nb3MuS2xlYmVyVGF2YXJlcy50c3g=": {
+      "title": "deco-sites/landing-page/sections/Logos/Logos.KleberTavares.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTG9nb3MvTG9nb3MuS2xlYmVyVGF2YXJlcy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/Logos/Logos.KleberTavares.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/Logos/Logos.KleberTavares.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyTW9kYWwuRWFzeUNvZGVycy50c3g=": {
+      "title": "deco-sites/landing-page/sections/Newsletter/NewsletterModal.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyTW9kYWwuRWFzeUNvZGVycy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/Newsletter/NewsletterModal.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/Newsletter/NewsletterModal.EasyCoders.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvUHJvZHVjdERldGFpbHMudHN4": {
       "title": "deco-sites/landing-page/sections/ProductDetails.tsx",
       "type": "object",
@@ -11069,6 +11489,27 @@
             "deco-sites/landing-page/sections/SearchResult.tsx"
           ],
           "default": "deco-sites/landing-page/sections/SearchResult.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvU2VjdGlvbkltYWdlL1NlY3Rpb25JbWFnZS5FYXN5Q29kZXJzLnRzeA==": {
+      "title": "deco-sites/landing-page/sections/SectionImage/SectionImage.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvU2VjdGlvbkltYWdlL1NlY3Rpb25JbWFnZS5FYXN5Q29kZXJzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/SectionImage/SectionImage.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/SectionImage/SectionImage.EasyCoders.tsx"
         }
       }
     },
@@ -12239,10 +12680,16 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQXV0aC9BdXRoLkVhc3lDb2RlcnMudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyR3JpZC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyUExQLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQ2FyZC9DYXJkLkVhc3lDb2RlcnMudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQ2Fyb3VzZWwudHN4"
@@ -12269,6 +12716,12 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTGlua1RyZWUudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTG9nb3MvTG9nb3MuS2xlYmVyVGF2YXJlcy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvTmV3c2xldHRlci9OZXdzbGV0dGVyTW9kYWwuRWFzeUNvZGVycy50c3g="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvUHJvZHVjdERldGFpbHMudHN4"
         },
         {
@@ -12276,6 +12729,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvU2VhcmNoUmVzdWx0LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvU2VjdGlvbkltYWdlL1NlY3Rpb25JbWFnZS5FYXN5Q29kZXJzLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvV2hhdHNBcHAudHN4"
