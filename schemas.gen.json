@@ -81,15 +81,18 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/landing-page/sections/Auth/Auth.EasyCoders.tsx",
+              "deco-sites/landing-page/sections/Banner/BannerImage.EasyCoders.tsx",
               "deco-sites/landing-page/sections/BannerGrid.tsx",
               "deco-sites/landing-page/sections/BannerPLP.tsx",
               "deco-sites/landing-page/sections/Card/Card.EasyCoders.tsx",
               "deco-sites/landing-page/sections/Carousel.tsx",
               "deco-sites/landing-page/sections/CookieConsent.tsx",
               "deco-sites/landing-page/sections/DesignSystem.tsx",
+              "deco-sites/landing-page/sections/FeatsItems/FeatsItems.EasyCoders.tsx",
               "deco-sites/landing-page/sections/Features.tsx",
               "deco-sites/landing-page/sections/Footer.tsx",
               "deco-sites/landing-page/sections/Header.tsx",
+              "deco-sites/landing-page/sections/Hero/Hero.EasyCoders.tsx",
               "deco-sites/landing-page/sections/Highlights.tsx",
               "deco-sites/landing-page/sections/LinkTree.tsx",
               "deco-sites/landing-page/sections/Logos/Logos.KleberTavares.tsx",
@@ -7072,6 +7075,56 @@
       "format": "image-uri",
       "title": "Image"
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyL0Jhbm5lckltYWdlLkVhc3lDb2RlcnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Url"
+            },
+            "textAlt": {
+              "type": "string",
+              "title": "Text Alt"
+            }
+          },
+          "required": [
+            "url",
+            "textAlt"
+          ],
+          "title": "Image"
+        },
+        "button": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            }
+          },
+          "required": [
+            "title"
+          ],
+          "title": "Button"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "image"
+      ],
+      "title": "deco-sites/landing-page/sections/Banner/BannerImage.EasyCoders.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2UvY29tcG9uZW50cy91aS9CYW5uZXJHcmlkLnRzeA==@Banner": {
       "type": "object",
       "properties": {
@@ -7361,9 +7414,20 @@
                 "title": "Description"
               },
               "image": {
-                "type": [
-                  "string",
-                  "null"
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                    "title": "Url"
+                  },
+                  "textAlt": {
+                    "type": "string",
+                    "title": "Text Alt"
+                  }
+                },
+                "required": [
+                  "url",
+                  "textAlt"
                 ],
                 "title": "Image"
               },
@@ -7377,7 +7441,8 @@
             },
             "required": [
               "title",
-              "description"
+              "description",
+              "image"
             ]
           },
           "title": "Products"
@@ -7822,6 +7887,34 @@
       },
       "required": [],
       "title": "deco-sites/landing-page/sections/DesignSystem.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRmVhdHNJdGVtcy9GZWF0c0l0ZW1zLkVhc3lDb2RlcnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name"
+              },
+              "description": {
+                "type": "string",
+                "title": "Description"
+              }
+            },
+            "required": [
+              "name",
+              "description"
+            ]
+          },
+          "title": "Features"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/landing-page/sections/FeatsItems/FeatsItems.EasyCoders.tsx@Props"
     },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2UvY29tcG9uZW50cy91aS9GZWF0dXJlcy50c3g=@Feature": {
       "type": "object",
@@ -8381,6 +8474,31 @@
         "alerts"
       ],
       "title": "deco-sites/landing-page/components/header/Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvSGVyby9IZXJvLkVhc3lDb2RlcnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "hasButtons": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Has Buttons"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle"
+      ],
+      "title": "deco-sites/landing-page/sections/Hero/Hero.EasyCoders.tsx@Props"
     },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2UvY29tcG9uZW50cy91aS9IaWdobGlnaHRzLnRzeA==@Highlight": {
       "type": "object",
@@ -11161,6 +11279,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyL0Jhbm5lckltYWdlLkVhc3lDb2RlcnMudHN4": {
+      "title": "deco-sites/landing-page/sections/Banner/BannerImage.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyL0Jhbm5lckltYWdlLkVhc3lDb2RlcnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/Banner/BannerImage.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/Banner/BannerImage.EasyCoders.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyR3JpZC50c3g=": {
       "title": "deco-sites/landing-page/sections/BannerGrid.tsx",
       "type": "object",
@@ -11282,6 +11421,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRmVhdHNJdGVtcy9GZWF0c0l0ZW1zLkVhc3lDb2RlcnMudHN4": {
+      "title": "deco-sites/landing-page/sections/FeatsItems/FeatsItems.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRmVhdHNJdGVtcy9GZWF0c0l0ZW1zLkVhc3lDb2RlcnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/FeatsItems/FeatsItems.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/FeatsItems/FeatsItems.EasyCoders.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRmVhdHVyZXMudHN4": {
       "title": "deco-sites/landing-page/sections/Features.tsx",
       "type": "object",
@@ -11342,6 +11502,27 @@
             "deco-sites/landing-page/sections/Header.tsx"
           ],
           "default": "deco-sites/landing-page/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvSGVyby9IZXJvLkVhc3lDb2RlcnMudHN4": {
+      "title": "deco-sites/landing-page/sections/Hero/Hero.EasyCoders.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvSGVyby9IZXJvLkVhc3lDb2RlcnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/landing-page/sections/Hero/Hero.EasyCoders.tsx"
+          ],
+          "default": "deco-sites/landing-page/sections/Hero/Hero.EasyCoders.tsx"
         }
       }
     },
@@ -12683,6 +12864,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQXV0aC9BdXRoLkVhc3lDb2RlcnMudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyL0Jhbm5lckltYWdlLkVhc3lDb2RlcnMudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvQmFubmVyR3JpZC50c3g="
         },
         {
@@ -12701,6 +12885,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRmVhdHNJdGVtcy9GZWF0c0l0ZW1zLkVhc3lDb2RlcnMudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvRmVhdHVyZXMudHN4"
         },
         {
@@ -12708,6 +12895,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvSGVhZGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvSGVyby9IZXJvLkVhc3lDb2RlcnMudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9sYW5kaW5nLXBhZ2Uvc2VjdGlvbnMvSGlnaGxpZ2h0cy50c3g="

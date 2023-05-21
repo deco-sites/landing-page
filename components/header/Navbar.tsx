@@ -37,7 +37,11 @@ function Navbar({ items, searchbar }: {
       {/* Desktop Version */}
       <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 py-5">
         <div class="flex-none w-44">
-          <a href="/" aria-label="Store logo" class="block px-4 py-3 text-2xl font-bold hover:scale-110 transition duration-150 tracking-wide leading-5">
+          <a
+            href="/"
+            aria-label="Store logo"
+            class="block px-4 py-3 text-2xl font-bold hover:scale-110 transition duration-150 tracking-wide leading-5"
+          >
             EasyBuy
           </a>
         </div>
