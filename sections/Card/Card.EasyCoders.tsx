@@ -40,7 +40,8 @@ export default function Card({ products, title }: Props) {
                     preload
                   />
 
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-1 pb-1 px-1 bg-white rounded-t-xl group-hover:-translate-y-1 transition-transform duration-300">

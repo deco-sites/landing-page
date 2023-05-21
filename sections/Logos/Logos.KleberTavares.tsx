@@ -28,8 +28,8 @@ export default function Logos({
               className="mx-4"
               src={element.url}
               alt={element.textAlt}
-              width={150}
-              height={150}
+              width={75}
+              height={75}
               loading="eager"
               decoding="async"
               fetchPriority="high"

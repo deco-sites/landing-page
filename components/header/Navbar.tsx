@@ -21,11 +21,10 @@ function Navbar({ items, searchbar }: {
 
         <a
           href="/"
-          class="flex-grow inline-flex items-center"
+          class="flex-grow inline-flex items-center text-2xl font-bold tracking-wide leading-5"
           style={{ minHeight: navbarHeight }}
-          aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          Easy Buy
         </a>
 
         <div class="flex gap-1">
